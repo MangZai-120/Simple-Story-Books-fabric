@@ -6,10 +6,14 @@
 - 在地牢、废弃矿井、村庄等宝箱中随机生成成书。
 - 完全可配置的书籍内容。
 - 可配置的生成概率和目标宝箱。
+- 可即时生效的改动
 
 ## 如何使用
+### 游戏内
+##### 直接输入/simplestory即可打开ui
 
-### 1. 添加书籍
+### 游戏外
+#### 1. 添加书籍
 模组首次运行后，会在 `.minecraft/config/simplestorybooks/books/` 目录下生成一个 `example_book.json`。
 你可以复制该文件并修改，或者创建新的 `.json` 文件来添加更多书籍。
 
@@ -46,3 +50,4 @@
 2. 在项目根目录打开终端。
 3. 运行 `gradlew build` (Windows) 或 `./gradlew build` (Mac/Linux)。
 4. 构建好的模组文件位于 `build/libs/` 目录。
+
