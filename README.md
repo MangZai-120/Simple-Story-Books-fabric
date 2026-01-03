@@ -10,7 +10,7 @@
 
 ## 如何使用
 ### 游戏内
-##### 直接输入/simplestory即可打开ui
+##### 直接输入`/simplestory`即可打开ui
 
 ### 游戏外
 #### 1. 添加书籍
@@ -50,4 +50,5 @@
 2. 在项目根目录打开终端。
 3. 运行 `gradlew build` (Windows) 或 `./gradlew build` (Mac/Linux)。
 4. 构建好的模组文件位于 `build/libs/` 目录。
+
 
