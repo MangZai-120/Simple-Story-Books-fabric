@@ -15,6 +15,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Formatting;
 import net.minecraft.loot.LootTables;
 import org.lwjgl.glfw.GLFW;
 
@@ -30,6 +31,7 @@ public class BookManagementScreen extends Screen {
     private String originalBookJson;
     private boolean isEditing = false;
     private boolean isNewBook = false;
+    private Text warningMessage = null;
 
     // Layout constants
     private int xOffset;
@@ -94,6 +96,7 @@ public class BookManagementScreen extends Screen {
 
     private void initListScreen() {
         this.clearChildren();
+        this.warningMessage = null;
         
         // Add "New Book" button
         this.addDrawableChild(ButtonWidget.builder(Text.translatable("gui.simplestorybooks.button.new_book"), button -> {
@@ -179,6 +182,14 @@ public class BookManagementScreen extends Screen {
         // Save & Cancel (Side by side)
         int buttonWidth = (fieldWidth - 4) / 2;
         this.addDrawableChild(ButtonWidget.builder(Text.translatable("gui.simplestorybooks.button.save"), b -> {
+            String newTitle = titleField.getText();
+            for (ConfigManager.BookData book : books) {
+                if (book != currentBook && book.title.equals(newTitle)) {
+                    this.warningMessage = Text.translatable("gui.simplestorybooks.error.name_taken").formatted(Formatting.RED);
+                    return;
+                }
+            }
+
             saveCurrentBook();
             sendSavePacket(currentBook);
             this.originalBookJson = new Gson().toJson(currentBook); // Update snapshot
@@ -302,6 +313,10 @@ public class BookManagementScreen extends Screen {
             context.drawText(this.textRenderer, Text.translatable("gui.simplestorybooks.label.author"), labelX, startY + gap, 0xFF000000, false);
             context.drawText(this.textRenderer, Text.translatable("gui.simplestorybooks.label.probability"), labelX, startY + gap * 2, 0xFF000000, false);
             // Loot tables label is now on the button
+            
+            if (this.warningMessage != null) {
+                context.drawText(this.textRenderer, this.warningMessage, labelX, yOffset + (int)(175 * SCALE), 0xFF000000, false);
+            }
         } else {
             context.drawText(this.textRenderer, Text.translatable("gui.simplestorybooks.label.book_list").append(" (" + (listPage + 1) + ")"), xOffset + (int)(36 * SCALE), yOffset + (int)(10 * SCALE), 0xFF000000, false);
         }

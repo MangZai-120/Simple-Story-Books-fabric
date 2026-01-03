@@ -29,5 +29,6 @@
   "gui.simplestorybooks.button.return_editing": "返回",
   "message.simplestorybooks.saved": "书籍已保存: %s",
   "message.simplestorybooks.deleted": "书籍已删除: %s",
-  "message.simplestorybooks.reloaded": "配置已重载！"
+  "message.simplestorybooks.reloaded": "配置已重载！",
+  "gui.simplestorybooks.error.name_taken": "名称已占用！"
 }

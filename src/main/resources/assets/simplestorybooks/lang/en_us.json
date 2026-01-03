@@ -29,5 +29,6 @@
   "gui.simplestorybooks.button.return_editing": "Return",
   "message.simplestorybooks.saved": "Book saved: %s",
   "message.simplestorybooks.deleted": "Book deleted: %s",
-  "message.simplestorybooks.reloaded": "Simple Story Books config reloaded!"
+  "message.simplestorybooks.reloaded": "Simple Story Books config reloaded!",
+  "gui.simplestorybooks.error.name_taken": "Name already taken!"
 }
