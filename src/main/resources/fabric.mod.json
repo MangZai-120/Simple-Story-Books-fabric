@@ -1,0 +1,36 @@
+{
+	"schemaVersion": 1,
+	"id": "simplestorybooks",
+	"version": "${version}",
+	"name": "Simple Story Books",
+	"description": "Adds randomly generated readable books to loot chests.",
+	"authors": [
+		"Me"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/simplestorybooks/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.example.simplestorybooks.SimpleStoryBooks"
+		],
+		"client": [
+			"com.example.simplestorybooks.client.SimpleStoryBooksClient"
+		]
+	},
+	"mixins": [
+	],
+	"depends": {
+		"fabricloader": ">=0.14.22",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

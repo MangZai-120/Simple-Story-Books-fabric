@@ -1,0 +1,13 @@
+{
+  "title": "Welcome Story",
+  "author": "Mod Author",
+  "pages": [
+    "Welcome to the Simple Story Books mod! This is a bundled book.",
+    "You can add more books by editing the config or using the remote loader."
+  ],
+  "probability": 0.5,
+  "loottables": [
+    "minecraft:chests/simple_dungeon",
+    "minecraft:chests/village/village_plains_house"
+  ]
+}

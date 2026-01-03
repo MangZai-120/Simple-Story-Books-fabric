@@ -1,0 +1,13 @@
+{
+  "_comment": "Configuration for Simple Story Books / 简单故事书配置",
+  "_instruction": "Modify 'loot_chance' for probability (0.0-1.0). 'loot_tables' keys are the loot tables, values are comments. / 修改 'loot_chance' 调整概率 (0.0-1.0)。'loot_tables' 的键是战利品表，值是注释。",
+  "loot_chance": 1.0,
+  "loot_tables": {
+    "minecraft:chests/simple_dungeon": "Dungeon / 地牢",
+    "minecraft:chests/abandoned_mineshaft": "Mineshaft / 废弃矿井",
+    "minecraft:chests/village/village_plains_house": "Village Plains House / 平原村庄房屋",
+    "minecraft:chests/stronghold_library": "Stronghold Library / 要塞图书馆",
+    "minecraft:chests/end_city_treasure": "End City Treasure / 末地城宝藏 (Disabled by default / 默认未启用)",
+    "minecraft:chests/woodland_mansion": "Woodland Mansion / 林地府邸 (Disabled by default / 默认未启用)"
+  }
+}
