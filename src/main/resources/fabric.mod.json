@@ -8,11 +8,11 @@
 		"Me"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/MangZai-120/Simple-Story-Books-fabric",
+		"sources": "https://github.com/MangZai-120/Simple-Story-Books-fabric"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/simplestorybooks/icon.png",
+	"icon": "assets/simplestorybooks/icon.jpg",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
