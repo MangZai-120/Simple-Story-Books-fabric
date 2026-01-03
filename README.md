@@ -51,4 +51,7 @@
 3. 运行 `gradlew build` (Windows) 或 `./gradlew build` (Mac/Linux)。
 4. 构建好的模组文件位于 `build/libs/` 目录。
 
+# 注意
+此模组以2k分辨率优化的ui，其它分辨率会有bug
+
 
